@@ -16,30 +16,26 @@ public class Rot13 {
     }
 
 	public static void xifraRot13(String cadena) {
-		for (int i = 0; i < cadena.length(); i++) {
-			if (Character.isLowerCase(cadena.charAt(i))) {
-				System.out.print(minuscules[buscarIndex(cadena.charAt(i), minuscules, true)]);
-			} else if (Character.isUpperCase(cadena.charAt(i))) {
-                System.out.print(majuscules[buscarIndex(cadena.charAt(i), majuscules, true)]);
-            } else {
-                System.out.print(cadena.charAt(i));
-            }
-		}
-        System.out.println();
+		aplicaRot13(cadena, true);
 	}
 
     public static void desxifraRot13(String cadena) {
+        aplicaRot13(cadena, false);
+    }
+
+    public static void aplicaRot13(String cadena, boolean encriptar) {
         for (int i = 0; i < cadena.length(); i++) {
-			if (Character.isLowerCase(cadena.charAt(i))) {
-				System.out.print(minuscules[buscarIndex(cadena.charAt(i), minuscules, false)]);
-			} else if (Character.isUpperCase(cadena.charAt(i))) {
-                System.out.print(majuscules[buscarIndex(cadena.charAt(i), majuscules, false)]);
+            if (Character.isLowerCase(cadena.charAt(i))) {
+                System.out.print(minuscules[buscarIndex(cadena.charAt(i), minuscules, encriptar)]);
+            } else if (Character.isUpperCase(cadena.charAt(i))) {
+                System.out.print(majuscules[buscarIndex(cadena.charAt(i), majuscules, encriptar)]);
             } else {
                 System.out.print(cadena.charAt(i));
             }
-		}
-        System.out.println();    
+        }
+        System.out.println();
     }
+
 
     public static void main(String[] args) {
         String[] noXifrat = {"ABC", "XYZ", "Hola, Mr. calçot", "Perdó, per tu què és?"};
