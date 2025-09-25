@@ -69,5 +69,4 @@ public class RotX {
         System.out.println("--------------------");
         forcaBrutaRotX("Úiüht, úiü wx ùxì ív?");
     }
-
 }
