@@ -5,15 +5,22 @@ public class RotX {
     public static String aplicaRotX(String cadena, int desplacament, boolean encriptar) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < cadena.length(); i++) {
-            if (Character.isLowerCase(cadena.charAt(i))) {
+            if (contiene(MINUS, cadena.charAt(i))) {
                 sb.append(MINUS[buscarIndex(cadena.charAt(i), MINUS, desplacament, encriptar)]);
-            } else if (Character.isUpperCase(cadena.charAt(i))) {
+            } else if (contiene(MAYUS, cadena.charAt(i))) {
                 sb.append(MAYUS[buscarIndex(cadena.charAt(i), MAYUS, desplacament, encriptar)]);
             } else {
                 sb.append(cadena.charAt(i));
             }
         }
         return sb.toString();
+    }
+
+    public static boolean contiene(char[] lista, char caracter) {
+        for (char c : lista) {
+            if (c == caracter) return true;
+        }
+        return false;
     }
 
     public static int buscarIndex(char caracter, char[] llista, int desplacament, boolean encriptar) {
