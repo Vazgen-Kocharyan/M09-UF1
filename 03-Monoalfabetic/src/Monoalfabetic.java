@@ -42,7 +42,6 @@ public class Monoalfabetic {
                 }
             }
         }
-
         return sb.toString();
     }
 
