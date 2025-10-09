@@ -4,12 +4,12 @@ public class Rot13 {
 
     public static int buscarIndex(char caracter, char[] llista, boolean encriptar) {
         for (int j = 0; j < llista.length; j++) {
-				if (caracter == llista[j]) {
-                    if (encriptar) {
-                        return (j+13) % llista.length;
-                    } else {
-                        return (j - 13 + llista.length) % llista.length;
-                    }
+            if (caracter == llista[j]) {
+                if (encriptar) {
+                    return (j+13) % llista.length;
+                } else {
+                    return (j - 13 + llista.length) % llista.length;
+                }
 			}					
 		}
         return 0;
