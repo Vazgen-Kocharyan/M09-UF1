@@ -68,7 +68,6 @@ public class Polialfabetic {
         return aplicaPoliAlfa(msg, true);
     }
 
-
     public static void main(String[] args) {
         String msgs[] = {"Test 01 àrbitre, coixí, Perímetre",
                         "Test 02 Taüll, DÍA, año",
@@ -89,5 +88,4 @@ public class Polialfabetic {
             System.out.printf("%-34s -> %s%n", msgsXifrats[i], msg);
         }
     }
-
 }
