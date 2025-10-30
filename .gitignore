@@ -28,6 +28,4 @@ replay_pid*
 
 *.iml
 
-*xml
-
 .gitignore
