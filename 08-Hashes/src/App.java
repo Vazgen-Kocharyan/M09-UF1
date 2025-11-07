@@ -24,8 +24,8 @@ public class App {
             long t2 = System.currentTimeMillis();
 
             System.out.printf("Pass   : %s\n", pwTrobat);
-            // System.out.printf("Provats: %d\n", h.npass);
-            // System.out.printf("Temps  : %s\n", h.getInterval(t1, t2));
+            System.out.printf("Provats: %d\n", h.npass);
+            System.out.printf("Temps  : %s\n", h.getInterval(t1, t2));
             System.out.printf("----------------------------------\n\n");
         }
     }
